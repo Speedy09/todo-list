@@ -43,7 +43,7 @@ export class AppComponent {
     this.taskDate = '';
   }
 
-  deleteTask(task: ) {
+  deleteTask(task: Task) {
     this.tasks = this.tasks.filter(e => e !== task);
   }
 
