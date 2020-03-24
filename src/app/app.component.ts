@@ -25,4 +25,8 @@ export class AppComponent {
       done: false
     }
   ]
+
+  onClear() {
+    this.tasks = [];
+  }
 }
