@@ -26,6 +26,31 @@ export class AppComponent {
     }
   ]
 
+  onEditMode() {
+    this.editMode = !this.editMode;
+    console.log(this.editMode)
+  }
+
+  createTask() {
+    const task: Task = {
+      name: this.taskName,
+      deadLine: this.taskDate,
+      done: false
+    }
+    this.tasks.push(task);
+    this.editMode = false;
+    this.taskName = '';
+    this.taskDate = '';
+  }
+
+  deleteTask(task: Task) {
+    this.tasks = this.tasks.filter(e => e !== task);
+  }
+
+  markTaskAsDone(task: Task) {
+    task.done = true;
+  }
+
   onClear() {
     this.tasks = [];
   }
