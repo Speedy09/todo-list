@@ -16,7 +16,7 @@
       </ng-template>
     </div>
     <div class="row" *ngIf="editMode">
-      <input class="col s8" type="text" placeholder="Add task..." [(ngModeldfsdf)]="taskName" />
+      <input class="col s8" type="text" placeholder="Add task..." [(ngModel)]="taskName" />
       <input class="col s2 disabled" type="date" [(ngModel)]="taskDate" />
       <button class="btn-floating" (click)="createTask()" [disabled]="taskName === '' || taskDate === ''">
         +
