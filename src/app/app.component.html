@@ -3,3 +3,15 @@
     <div class="nav-wrapper color">
       <span class="brand-logo center">{{title | uppercase}}</span>
     </div>
+    </nav>
+    <div class="row">
+      <ng-container *ngIf="editMode; then editOn; else editOff"></ng-container>
+      <ng-template #editOff>
+        <button class="btn col s2 offset-s10" (click)="onEditMode()">Add task
+        </button>
+      </ng-template>
+      <ng-template #editOn>
+        <button class="btn col s2 offset-s10" (click)="onEditMode()">Cancel
+        </button>
+      </ng-template>
+    </div>
